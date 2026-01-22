@@ -1,12 +1,7 @@
-USE airline_databases;
-GO
-
--- Primary Keys
-ALTER TABLE Passenger
-ADD CONSTRAINT PK_Passenger PRIMARY KEY (PassportNumber);
-
-ALTER TABLE Flight
-ADD CONSTRAINT PK_Flight PRIMARY KEY (FlightCode);
-
-ALTER TABLE UserAccount
-ADD CONSTRAINT PK_User PRIMARY KEY (username);
+SELECT * FROM Airline;
+SELECT * FROM Airplane;
+SELECT * FROM Airport;
+SELECT * FROM Flight;
+SELECT * FROM Passenger;
+SELECT * FROM Seat;
+SELECT * FROM UserAccount;
