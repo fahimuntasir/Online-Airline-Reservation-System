@@ -111,21 +111,38 @@ Through this project, I gained hands-on experience in:
 ```bash
 Online-Airline-Reservation-System/
 │
-├── README.md
-│
-├── SQL/
-│   ├── create_database.sql
-│   ├── create_tables.sql
-│   ├── insert_data.sql
-│   ├── queries.sql
-│   └── constraints.sql
-│
 ├── Diagrams/
 │   ├── er_diagram.png
 │   ├── logical_structure.png
 │   └── physical_structure.png
 │
-└── DBMS_Project_Report.pdf
+├── backend/
+│   ├── bean/
+│   │   ├── LoginBean.java
+│   │   └── ReservationBean.java
+│   │
+│   ├── database/
+│   │   ├── DBConnection.java
+│   │   ├── LoginDao.java
+│   │   └── ReservationDao.java
+│   │
+│   └── servlet/
+│       ├── LoginServlet.java
+│       └── ReservationServlet.java
+│
+├── database/
+│   ├── create_database.sql
+│   ├── create_tables.sql
+│   ├── insert_data.sql
+│   └── queries.sql
+│
+├── frontend/
+│   ├── login.jsp
+│   └── reservation.jsp
+│
+├── DBMS_Project_Report.pdf
+│
+└── README.md
 ```
 
 ---
