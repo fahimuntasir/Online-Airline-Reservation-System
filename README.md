@@ -108,19 +108,24 @@ Through this project, I gained hands-on experience in:
 
 ## 📂 Repository Structure (Suggested)
 
-```bash
-├── docs/
-│   └── DBMS_Project_Report.pdf
+Online-Airline-Reservation-System/
+│
+├── README.md
+│
 ├── sql/
-│   ├── database.sql
-│   ├── tables.sql
-│   ├── inserts.sql
-│   └── queries.sql
+│   ├── create_database.sql
+│   ├── create_tables.sql
+│   ├── insert_data.sql
+│   ├── queries.sql
+│   └── constraints.sql
+│
 ├── diagrams/
-│   ├── er-diagram.png
-│   ├── dfd.png
-│   └── architecture.png
-└── README.md
+│   ├── er_diagram.png
+│   ├── logical_structure.png
+│   └── physical_structure.png
+│
+└── docs/
+    └── DBMS_Project_Report.pdf
 ```
 
 ---
