@@ -108,6 +108,7 @@ Through this project, I gained hands-on experience in:
 
 ## 📂 Repository Structure (Suggested)
 
+```bash
 Online-Airline-Reservation-System/
 │
 ├── README.md
