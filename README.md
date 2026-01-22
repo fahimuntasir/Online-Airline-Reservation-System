@@ -113,20 +113,19 @@ Online-Airline-Reservation-System/
 │
 ├── README.md
 │
-├── sql/
+├── SQL/
 │   ├── create_database.sql
 │   ├── create_tables.sql
 │   ├── insert_data.sql
 │   ├── queries.sql
 │   └── constraints.sql
 │
-├── diagrams/
+├── Diagrams/
 │   ├── er_diagram.png
 │   ├── logical_structure.png
 │   └── physical_structure.png
 │
-└── docs/
-    └── DBMS_Project_Report.pdf
+└── DBMS_Project_Report.pdf
 ```
 
 ---
