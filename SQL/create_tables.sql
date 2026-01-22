@@ -1,38 +1,71 @@
-USE airline_databases;
-GO
+-- Airline Table
+CREATE TABLE Airline (
+    OwnDiscount FLOAT NOT NULL,
+    AirlineName CHAR(40)
+);
 
--- Insert Airlines
-INSERT INTO Airline VALUES
-(3, 'China Southern Airlines'),
-(6, 'Biman Bangladesh Airlines'),
-(9, 'US-Bangla Airlines'),
-(11, 'Regent Airways'),
-(8, 'Novoair');
+-- Airplane Table
+CREATE TABLE Airplane (
+    AircraftNumber CHAR(20) NOT NULL,
+    AircraftType CHAR(20)
+);
 
--- Insert Airplanes
-INSERT INTO Airplane VALUES
-('A320-01', 'Airbus A320'),
-('B737-02', 'Boeing 737');
+-- Airport Table
+CREATE TABLE Airport (
+    AirportCode INT NOT NULL,
+    City CHAR(20),
+    Country CHAR(20),
+    FlightCode CHAR(20)
+);
 
--- Insert Airports
-INSERT INTO Airport VALUES
-(58450, 'Dhaka', 'Bangladesh', 'DAC01'),
-(78493, 'Wuhan', 'China', 'WUH01');
+-- Flight Table
+CREATE TABLE Flight (
+    FlightCode CHAR(20) NOT NULL,
+    AirplaneName CHAR(20),
+    Airplanecode CHAR(10),
+    DepatureTime TIME,
+    ArrivalTime TIME,
+    TravelTime FLOAT,
+    DepatureAirport CHAR(20),
+    ArrivalAirport CHAR(20),
+    Fare FLOAT,
+    DepatureDate DATE,
+    ArrivalDate DATE
+);
 
--- Insert Flights
-INSERT INTO Flight VALUES
-('FL001', 'China Southern', 'A320-01', '10:30', '13:30', 3.0, 'Dhaka', 'Wuhan', 350.50, '2021-12-28', '2021-12-28');
+-- Order Table
+CREATE TABLE Orders (
+    orderNumber NCHAR(20) NOT NULL,
+    startCity NCHAR(20),
+    endCity NCHAR(20),
+    price FLOAT,
+    startAirport NCHAR(20),
+    endAirport NCHAR(20),
+    startDate DATE,
+    startTime TIME,
+    endDate DATE,
+    endTime TIME,
+    seatType NCHAR(20),
+    CONSTRAINT PK_Orders PRIMARY KEY (orderNumber)
+);
 
--- Insert Passengers
-INSERT INTO Passenger VALUES
-('P-1001', 'Zaman', 'ID9988', '017xxxxxxx');
+-- Passenger Table
+CREATE TABLE Passenger (
+    PassportNumber CHAR(20) NOT NULL,
+    Name CHAR(10),
+    IDNumber CHAR(18),
+    PhoneNumber CHAR(20)
+);
 
--- Insert Seats
-INSERT INTO Seat VALUES
-(1, 'ECONOMY', 1),
-(2, 'BUSINESS', 2);
+-- Seat Table
+CREATE TABLE Seat (
+    NumberStatus INT NOT NULL,
+    Type CHAR(20),
+    Status INT
+);
 
--- Insert Users
-INSERT INTO UserAccount VALUES
-('fahim', 'fm6fm6'),
-('zaman', 'nkies223');
+-- UserAccount Table
+CREATE TABLE UserAccount (
+    username CHAR(20) NOT NULL,
+    password CHAR(20)
+);
