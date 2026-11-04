@@ -1,164 +1,91 @@
-# ✈️ Online Airline Reservation System (DBMS Project)
+# Online Airline Reservation System
 
-A database-driven **Online Airline Reservation System** developed as part of a **Database Management Systems (DBMS) course design project**.
-The system supports flight search, booking, seat selection, and reservation cancellation using a structured relational database.
+**Database Management Systems (DBMS) — Academic Course Project**
 
----
+This repository documents an academic project exploring how relational databases can be used to model an airline reservation system. It brings together database diagrams, SQL scripts, a course report, and supporting Java/JSP code examples.
 
-## 📌 Project Overview
+The repository is shared for **academic documentation and learning**. It should not be described as a fully implemented or production-ready flight-booking service.
 
-This project simulates a real-world airline reservation platform where users can:
+> **Authorship and attribution:** Some supporting code was obtained or adapted from external educational sources. This repository does not claim that every implementation file is original work. Original authorship and applicable reuse terms remain with the respective source creators. Source-specific credits should be added as those references are confirmed.
 
-* Search available flights between cities
-* Compare flights by **price** or **travel time**
-* Book seats with passenger details
-* Cancel reservations
-* Manage airline, airport, flight, and seat data via SQL
+## Project Scope
 
-The system focuses primarily on **database design, normalization, and query operations**, with a client–server architecture concept.
+The coursework focuses on modeling data and exploring database operations for an airline reservation scenario, including:
 
----
+- Airlines, airplanes, airports, and flights
+- Passengers, seats, and order-related records
+- User-account data
+- Database schema design and sample records
+- Basic SQL queries and introductory Java database-access examples
 
-## 🧩 Key Features
+Flight search, live seat availability, booking confirmation, and reservation cancellation are **system concepts**, not complete end-to-end features verified in the uploaded application.
 
-* 🔍 Flight search by source, destination, and date
-* 💺 Seat availability and seat-type selection
-* 🧾 Reservation booking & cancellation
-* 🗃️ Well-structured relational database (3NF)
-* 🔐 User authentication (username & password)
-* 📊 SQL queries for CRUD operations
+## Repository Contents
 
----
+| Location | Contents |
+| --- | --- |
+| `Diagrams/` | Database design diagrams |
+| `database/create_database.sql` | Database creation script |
+| `database/create_tables.sql` | Table definitions |
+| `database/insert_data.sql` | Sample data script |
+| `database/queries.sql` | Basic table-retrieval queries |
+| `backend/bean/` | Java data classes |
+| `backend/database/` | JDBC connection and DAO examples |
+| `backend/servlet/` | Servlet examples for login and passenger-record actions |
+| `frontend/` | Basic JSP forms |
+| `1911521213-DBMS project submission report-MUNTASIR MD FAHIM.pdf` | Academic project report |
 
-## 🏗️ System Architecture
+## Database Design
 
-The project demonstrates **two architectural approaches**:
+The included SQL schema defines tables named `Airline`, `Airplane`, `Airport`, `Flight`, `Orders`, `Passenger`, `Seat`, and `UserAccount`.
 
-* **Two-tier (Client–Database)**
-* **Three-tier (Client–Server–Database)**
+The diagrams and report provide the database design context. The uploaded SQL definitions are introductory coursework scripts: they do **not** comprehensively enforce all primary-key and foreign-key relationships. Normalization should therefore be assessed from the schema and report rather than assumed.
 
-Business logic, presentation, and data layers are clearly separated to ensure scalability and maintainability.
+## Technologies Represented
 
----
+- **SQL and relational database design:** Schema and data scripts, along with diagrams
+- **Microsoft SQL Server-style SQL:** The database-creation script uses `GO` batch separators
+- **Java and JDBC:** Example database connection and data-access classes
+- **Java Servlets and JSP:** Basic server-side and form examples
+- **MySQL JDBC configuration:** The current `DBConnection.java` points to MySQL, which is not aligned with the SQL Server-style setup script
 
-## 🗄️ Database Design
+The Java and database components need configuration and implementation work before they can be used together as a complete application.
 
-### Entities / Tables
+## Current Implementation Status
 
-* `Airline`
-* `Airplane`
-* `Airport`
-* `Flight`
-* `Passenger`
-* `Seat`
-* `Order`
-* `UserAccount`
+The repository contains design artifacts and partial educational implementation code. In the uploaded source:
 
-### Design Highlights
+- SQL scripts provide database/table creation, data insertion, and simple data retrieval.
+- The JSP files provide basic login and passenger-entry forms.
+- The Java DAO examples show account lookup and passenger record insertion, modification, and deletion.
+- The reservation servlet does not implement full flight-booking or seat-allocation workflows.
+- Some Java classes are incomplete; the code has not been verified as a buildable, runnable application.
+- The example login and database connection code must be secured before any real deployment.
 
-* ER Diagram → Relational Schema
-* Normalized up to **Third Normal Form (3NF)**
-* Primary & foreign key relationships
-* Supports real-world airline booking scenarios
+These limitations are documented to distinguish the **system design** from the **implemented demonstration code**.
 
----
+## Working With the Files
 
-## 🛠️ Technologies Used
+1. Start with the academic project report and diagrams to understand the intended system.
+2. Review the scripts in `database/` to study the entities and SQL operations.
+3. Examine the code under `backend/` and `frontend/` as partial Java/JSP examples.
+4. Before attempting to run an application, choose and configure a single database engine, supply appropriate JDBC dependencies and servlet configuration, complete missing Java methods, and remove hardcoded credentials.
 
-| Category        | Tools                |
-| --------------- | -------------------- |
-| Database        | Microsoft SQL Server |
-| Query Language  | SQL                  |
-| Backend Concept | Java (Servlet + DAO) |
-| Architecture    | Client–Server (C/S)  |
-| Design          | ER Diagram, DFD      |
+**Note:** This repository does not currently provide a verified one-command installation or execution process. The code should not be deployed with the sample authentication or connection settings.
 
----
+## Source Acknowledgments
 
-## ⚙️ Database Operations
+Some application-code examples were obtained or adapted from external educational resources. The repository is maintained as a record of academic study, not as a claim of sole authorship over the included source code.
 
-* **Database creation**
-* **Table creation**
-* **Data insertion**
-* **Data modification**
-* **Data deletion**
-* **Advanced SQL queries**
+**Attribution to complete:** Identify the original tutorials or repositories used and add their names, URLs, relevant files, and any required copyright or license notices here. A package name alone is not sufficient evidence to assign authorship to a specific source.
 
-Sample operations include:
+## Academic Context
 
-* Flight search queries
-* Passenger data retrieval
-* Seat availability tracking
-* User authentication queries
+- **Project:** Online Airline Reservation System
+- **Course:** Database Management Systems (DBMS)
+- **Student / repository maintainer:** Muntasir Md Fahim
+- **Field:** Computer Science and Technology
 
----
+## Permissions and Reuse
 
-## 🧪 Learning Outcomes
-
-Through this project, I gained hands-on experience in:
-
-* Designing relational databases
-* Writing optimized SQL queries
-* Understanding normalization & constraints
-* Implementing DAO-based database access
-* Comparing 2-tier vs 3-tier architectures
-* Debugging common SQL issues (e.g., string truncation)
-
----
-
-## 📂 Repository Structure (Suggested)
-
-```bash
-Online-Airline-Reservation-System/
-│
-├── Diagrams/
-│   ├── er_diagram.png
-│   ├── logical_structure.png
-│   └── physical_structure.png
-│
-├── backend/
-│   ├── bean/
-│   │   ├── LoginBean.java
-│   │   └── ReservationBean.java
-│   │
-│   ├── database/
-│   │   ├── DBConnection.java
-│   │   ├── LoginDao.java
-│   │   └── ReservationDao.java
-│   │
-│   └── servlet/
-│       ├── LoginServlet.java
-│       └── ReservationServlet.java
-│
-├── database/
-│   ├── create_database.sql
-│   ├── create_tables.sql
-│   ├── insert_data.sql
-│   └── queries.sql
-│
-├── frontend/
-│   ├── login.jsp
-│   └── reservation.jsp
-│
-├── DBMS_Project_Report.pdf
-│
-└── README.md
-```
-
----
-
-## 📜 License
-
-This project is developed for **academic and educational purposes**.
-
-You are free to **use, modify, and extend** this project with proper attribution.
-
----
-
-## 👤 Author
-
-**Muntasir Md Fahim**
-Department of Computer Science & Technology
-DBMS Course Design Project
-
----
+No blanket permission to reuse all files is granted by this README. Any third-party material remains subject to the terms set by its original author or license holder. Please review the source and licensing information before reusing code.
